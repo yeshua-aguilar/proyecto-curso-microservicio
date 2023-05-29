@@ -31,9 +31,9 @@ public class Curso {
 	@Column(name = "nombre")
 	private String nombre;
 	@Column(name = "codigoLibro")
-	private int codigolibro;
+	private int codigoLibro;
 	@Column(name = "cantidadLibro")
-	private int cantidaLibro;
+	private int cantidadLibro;
 	
 	public int getId() {
 		return id;
@@ -47,18 +47,21 @@ public class Curso {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getCodigolibro() {
-		return codigolibro;
+	public int getCodigoLibro() {
+		return codigoLibro;
 	}
-	public void setCodigolibro(int codigolibro) {
-		this.codigolibro = codigolibro;
+	public void setCodigoLibro(int codigoLibro) {
+		this.codigoLibro = codigoLibro;
 	}
-	public int getCantidaLibro() {
-		return cantidaLibro;
+	public int getCantidadLibro() {
+		return cantidadLibro;
 	}
-	public void setCantidaLibro(int cantidaLibro) {
-		this.cantidaLibro = cantidaLibro;
+	public void setCantidadLibro(int cantidadLibro) {
+		this.cantidadLibro = cantidadLibro;
 	}
+	
+	
+	
 	
 	
 

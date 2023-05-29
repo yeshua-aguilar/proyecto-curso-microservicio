@@ -20,8 +20,8 @@ public class CursoServiceImpl implements CursoService {
     public CursoDTO crearCurso(CursoDTO cursoDTO) {
         Curso curso = new Curso();
         curso.setNombre(cursoDTO.getNombre());
-        curso.setCantidaLibro(cursoDTO.getCantidadLibro());
-        curso.setCodigolibro(cursoDTO.getCodigoLibro());
+        curso.setCantidadLibro(cursoDTO.getCantidadLibro());
+        curso.setCodigoLibro(cursoDTO.getCodigoLibro());
         cursoRepository.save(curso);
         cursoDTO.setId(curso.getId());
         return cursoDTO;
@@ -36,8 +36,8 @@ public class CursoServiceImpl implements CursoService {
         CursoDTO cursoDTO = new CursoDTO();
         cursoDTO.setId(curso.getId());
         cursoDTO.setNombre(curso.getNombre());
-        cursoDTO.setCantidadLibro(curso.getCodigolibro());
-        cursoDTO.setCodigoLibro(curso.getCodigolibro());
+        cursoDTO.setCantidadLibro(curso.getCodigoLibro());
+        cursoDTO.setCodigoLibro(curso.getCodigoLibro());
         return cursoDTO;
     }
 
@@ -48,8 +48,8 @@ public class CursoServiceImpl implements CursoService {
             CursoDTO cursoDTO = new CursoDTO();
             cursoDTO.setId(curso.getId());
             cursoDTO.setNombre(curso.getNombre());
-            cursoDTO.setCantidadLibro(curso.getCodigolibro());
-            cursoDTO.setCodigoLibro(curso.getCantidaLibro());
+            cursoDTO.setCantidadLibro(curso.getCodigoLibro());
+            cursoDTO.setCodigoLibro(curso.getCantidadLibro());
             return cursoDTO;
         }).collect(Collectors.toList());
     }
