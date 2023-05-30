@@ -8,5 +8,5 @@ public interface CursoService {
     CursoDTO crearCurso(CursoDTO cursoDTO);
     CursoDTO obtenerCursoPorId(int id);
     List<CursoDTO> obtenerTodosLosCursos();
-    void eliminarCurso(int id);
+    boolean eliminarCurso(int id);
 }

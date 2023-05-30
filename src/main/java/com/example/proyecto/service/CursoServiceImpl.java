@@ -36,7 +36,7 @@ public class CursoServiceImpl implements CursoService {
         CursoDTO cursoDTO = new CursoDTO();
         cursoDTO.setId(curso.getId());
         cursoDTO.setNombre(curso.getNombre());
-        cursoDTO.setCantidadLibro(curso.getCodigoLibro());
+        cursoDTO.setCantidadLibro(curso.getCantidadLibro());
         cursoDTO.setCodigoLibro(curso.getCodigoLibro());
         return cursoDTO;
     }
@@ -48,14 +48,19 @@ public class CursoServiceImpl implements CursoService {
             CursoDTO cursoDTO = new CursoDTO();
             cursoDTO.setId(curso.getId());
             cursoDTO.setNombre(curso.getNombre());
-            cursoDTO.setCantidadLibro(curso.getCodigoLibro());
-            cursoDTO.setCodigoLibro(curso.getCantidadLibro());
+            cursoDTO.setCantidadLibro(curso.getCantidadLibro());
+            cursoDTO.setCodigoLibro(curso.getCodigoLibro());
             return cursoDTO;
         }).collect(Collectors.toList());
     }
 
     @Override
-    public void eliminarCurso(int id) {
-        cursoRepository.deleteById(id);
+    public boolean eliminarCurso(int id) {
+    	try {
+            cursoRepository.deleteById(id);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
