@@ -6,26 +6,28 @@ import com.example.proyecto.dto.CursoDTO;
 
 public class CursosResponse2 {
 	private String resultado;
-    private List<CursoDTO> cursos;
+    private List<CursoDTO> curso;
 
-    public CursosResponse2(String resultado, List<CursoDTO> cursos) {
+    public CursosResponse2(String resultado, List<CursoDTO> curso) {
         this.resultado = resultado;
-        this.cursos = cursos;
+        this.curso = curso;
     }
 
-    public String getResultado() {
-        return resultado;
-    }
+	public String getResultado() {
+		return resultado;
+	}
 
-    public void setResultado(String resultado) {
-        this.resultado = resultado;
-    }
+	public void setResultado(String resultado) {
+		this.resultado = resultado;
+	}
 
-    public List<CursoDTO> getCurso() {
-        return cursos;
-    }
+	public List<CursoDTO> getCurso() {
+		return curso;
+	}
 
-    public void setCurso(List<CursoDTO> cursos) {
-        this.cursos = cursos;
-    }
+	public void setCurso(List<CursoDTO> curso) {
+		this.curso = curso;
+	}
+
+    
 }

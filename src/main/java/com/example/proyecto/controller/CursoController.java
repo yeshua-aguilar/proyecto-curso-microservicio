@@ -53,8 +53,18 @@ public class CursoController {
         if (cursos.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(new CursosResponse2("Busqueda de todos los cursos Exitosa", cursos));
+        CursosResponse2 response = new CursosResponse2(null, cursos);
+        response.setResultado("Busqueda de todos los cursos Exitosa");
+        response.setCurso(cursos);
+        return ResponseEntity.ok(response);
     }
+//    public ResponseEntity<CursosResponse2> obtenerTodosLosCursos() {
+//        List<CursoDTO> cursos = cursoService.obtenerTodosLosCursos();
+//        if (cursos.isEmpty()) {
+//            return ResponseEntity.notFound().build();
+//        }
+//        return ResponseEntity.ok(new CursosResponse2("Busqueda de todos los cursos Exitosa", cursos));
+//    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<CursosResponse> eliminarCurso(@PathVariable int id) {
