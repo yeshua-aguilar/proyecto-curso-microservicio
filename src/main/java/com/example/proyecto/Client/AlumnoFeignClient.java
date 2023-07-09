@@ -15,7 +15,7 @@ public interface AlumnoFeignClient {
 	public ResponseDto readAllAlumnos();
 
     @GetMapping("/alumnos/{id}")
-    public ResponseDto readAlumnos(@PathVariable("id") Long id);
+    public ResponseDto readAlumnos(@PathVariable("id") int id);
 }
 
 

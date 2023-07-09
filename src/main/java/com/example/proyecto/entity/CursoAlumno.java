@@ -29,7 +29,7 @@ public class CursoAlumno {
 	@Column(name = "idcurso")
 	private int idCurso;
 	@Column(name = "idalumno")
-	private Long idAlumno;
+	private int idAlumno;
 	
 
 }

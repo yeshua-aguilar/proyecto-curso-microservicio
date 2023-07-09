@@ -14,7 +14,7 @@ public class AlumnosCursoDTO {
 	private int id;
 	private int idCurso;
 	private String nombreCurso;
-	private Long idAlumno;
+	private int idAlumno;
 	private String nombreAlumno;
 
 }
